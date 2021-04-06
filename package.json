@@ -1,0 +1,22 @@
+{
+  "name": "svg-app",
+  "version": "0.0.1",
+  "description": "SVG App Bundler",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "bundle": "node bundle.js",
+    "build:watch": "tsc-watch app.ts --onSuccess \"node bundle\""
+  },
+  "keywords": [],
+  "author": "neelts",
+  "license": "ISC",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "tsc": "^1.20150623.0",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.2.3"
+  }
+}
