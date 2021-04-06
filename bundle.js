@@ -18,7 +18,7 @@ new Command()
 function action(svg, options, command) {
     const file = fs.readFileSync(svg, 'utf-8');
     const code = options.code ? fs.readFileSync(options.code, 'utf-8') : null;
-    const style = options.style ? fs.readFileSync('app.css', 'utf-8') : null;
+    const style = options.style ? fs.readFileSync(options.style, 'utf-8') : null;
     const output = options.output ?? /(.+)\./g.exec(path.basename(svg))[1] + '-bundle.svg';
     new xml2js.Parser({
         explicitRoot: false
